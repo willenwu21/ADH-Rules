@@ -41,7 +41,6 @@ if __name__ == '__main__':
         'https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt',
         'https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt',
         'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
-        'https://raw.githubusercontent.com/nickspaargaren/no-google/master/pihole-google.txt',
         'https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/all.txt',
         'https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/skyrules.txt',
         'https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/master/ok.txt'
