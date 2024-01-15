@@ -1,0 +1,78 @@
+name: "Run Tools"
+on:
+  push:
+    paths-ignore:
+      - "README.md"
+      - "*.md"
+    branches: [main]
+  schedule:
+    - cron: 0 */12 * * *
+  workflow_dispatch:
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  Run_Tools:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Python 3.10
+        uses: actions/setup-python@main
+        with:
+          python-version: "3.10"
+
+      - name: Install Dependencies
+        run: |
+          sudo timedatectl set-timezone "$TZ"
+          python -m pip install --upgrade pip
+          pip install -U requests
+
+      - name: Set up Node-20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install Hostlist Compiler
+        run: npm i -g @adguard/hostlist-compiler
+
+      - name: Run Tools
+        run: |
+          python main.py
+          rm -rf __pycache__
+
+      - name: Execute Hostlist Compiler
+        run: |
+          hostlist-compiler -i merge.txt -o rules.txt
+          rm -rf merge.txt
+
+      - name: Commit Changes
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then 
+              exit 0
+          else
+            echo "status=success" >> $GITHUB_OUTPUT
+            git add .
+            git config --local user.email "willenwu21@gmail.com"
+            git config --local user.name "willenwu21"
+            git commit -m "CI Updated at $(date +'%Y-%m-%d %H:%M:%S')" -a
+          fi
+
+      - name: GitHub Push
+        if: steps.commit.outputs.status == 'success' && !cancelled()
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          branch: ${{github.ref}}
+
+      - name: Delete Workflow Runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 1
+          keep_minimum_runs: 1
