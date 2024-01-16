@@ -65,12 +65,6 @@ def _clean_rule_dir(rule_dir):
         shutil.rmtree(rule_dir)
 
 
-def _del_merge_file(_merge_file):
-    if os.path.exists(_merge_file):
-        print('rules dir exist, delete : %s' % _merge_file)
-        os.remove(_merge_file)
-
-
 if __name__ == '__main__':
     # Start
     start = time.process_time()
@@ -81,8 +75,6 @@ if __name__ == '__main__':
     _merge_allow(_base_dir + '/' + _merge_txt_f, _base_dir + '/' + _my_allow_f)
     # clean rules dir
     _clean_rule_dir(_rule_dir)
-    # delete merge.txt
-    _del_merge_file(_base_dir + '/' + _merge_txt_f)
     # end
     end = time.process_time()
     print('Running time : %s Seconds' % (end-start))
