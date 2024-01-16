@@ -44,9 +44,7 @@ jobs:
           rm -rf __pycache__
 
       - name: Execute Hostlist Compiler
-        run: |
-          hostlist-compiler -i merge.txt -o rules.txt
-          rm -rf merge.txt
+        run: hostlist-compiler -c config.json -o rules.txt
 
       - name: Commit Changes
         id: commit
