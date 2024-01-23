@@ -1,1 +1,5 @@
 @@||amdc.m.taobao.com^$important
+||api-web-game-ssl.xunlei.com^$important
+||analysis-acc-ssl.xunlei.com^$important
+||touch.vip.xunlei.com^$important
+||touch-vip-ssl.xunlei.com^$important
