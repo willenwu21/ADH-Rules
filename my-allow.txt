@@ -3,3 +3,7 @@
 ||analysis-acc-ssl.xunlei.com^$important
 ||touch.vip.xunlei.com^$important
 ||touch-vip-ssl.xunlei.com^$important
+@@||wlog.kuaishou.com^$important
+@@||s1.kskwai.com^$important
+@@||s3.kskwai.com^$important
+@@||log-sdk.ksapisrv.com^$important
