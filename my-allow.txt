@@ -7,3 +7,12 @@
 @@||s1.kskwai.com^$important
 @@||s3.kskwai.com^$important
 @@||log-sdk.ksapisrv.com^$important
+@@||vzan.com^$important
+||code.51.com^$important
+||cdn.51img1.com^$important
+||cdnan.51img5.com^$important
+||tg.51.com^$important
+||88cdn.com^$important
+@@||onrt-stsdk.vivo.com.cn^$important
+@@||oth.eve.mdt.qq.com^$important
+@@||ap6.ssl.msdk.qq.com^$important
