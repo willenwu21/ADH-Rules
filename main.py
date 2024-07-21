@@ -19,8 +19,7 @@ _download_list = [
     'https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt',
     'https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt',
     'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
-    'https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt',
-    'https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt'
+    'https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt'
 ]
 
 

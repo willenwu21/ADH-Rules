@@ -16,3 +16,8 @@
 @@||onrt-stsdk.vivo.com.cn^$important
 @@||oth.eve.mdt.qq.com^$important
 @@||ap6.ssl.msdk.qq.com^$important
+@@||cdn.exp.xiaomi.com^$important
+@@||tracker.ai.xiaomi.com^$important
+@@||resolver.mi.xiaomi.com^$important
+@@||tv.aiseet.atianqi.com^$important
+@@||fp-it.fengkongcloud.com^$important
