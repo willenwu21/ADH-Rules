@@ -17,7 +17,7 @@ _download_list = [
     'https://github.com/badmojr/1Hosts/releases/download/latest/1hosts-Lite_adblock.txt',
     'https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt',
     'https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt',
-    'https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt',
+    'https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt',
     'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
     'https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt'
 ]
